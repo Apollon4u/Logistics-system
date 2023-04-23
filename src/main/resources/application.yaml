@@ -1,24 +1,21 @@
 spring:
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:logistics_system_db}
-    username: ${DB_USER:postgres}
-    password: ${DB_PASSWORD:admin}
-  flyway:
-    baselineOnMigrate: true
-    enabled: true
-    schemas: public
-  jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    hibernate:
-      ddl-auto: none
-    open-in-view: false
-    show-sql: false
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:admin@core-cluster.pb9sf.mongodb.net/logistics_db?retryWrites=true&w=majority
   security:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: ${JWT_SET_URI:https://localhost:8080/auth/realms/doco-dev/protocol/openid-connect/certs}
+          jwk-set-uri: ${JWT_SET_URI:https://app.please-open.it/auth/realms/bd9c17f0-3f44-438d-9133-0507836fe18d/protocol/openid-connect/certs}
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+               MongoTemplate: DEBUG
 
 server:
   port: ${SERVER_PORT:8081}
@@ -26,9 +23,9 @@ server:
     enabled: true
 
 keycloak:
-  auth-server-url: ${AUTH_SERVER_URL:}
-  realm: ${REALM:}
-  resource: ${CLIENT_ID:}
-  client-secret: ${CLIENT_SECRET:}
-  username: ${REALM_USERNAME:}
-  password: ${REALM_USER_PASSWORD:}
+  auth-server-url: ${AUTH_SERVER_URL:https://app.please-open.it/auth}
+  realm: ${REALM:bd9c17f0-3f44-438d-9133-0507836fe18d}
+  resource: ${CLIENT_ID:my-client}
+  client-secret: ${CLIENT_SECRET:OUPEpNq7rwBppzuPVIVEYWZEGqRirUhl}
+  username: ${REALM_USERNAME:darkapollon3@gmail.com}
+  password: ${REALM_USER_PASSWORD:qwer123}

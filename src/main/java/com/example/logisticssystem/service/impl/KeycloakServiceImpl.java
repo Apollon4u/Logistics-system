@@ -25,9 +25,7 @@ import java.util.List;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class KeycloakServiceImpl implements KeycloakService {
 
-    Keycloak userKeycloak;
-
-    UsersResource usersResource;
+    final UsersResource usersResource;
 
     @Value("${keycloak.auth-server-url}")
     String url;
@@ -58,7 +56,7 @@ public class KeycloakServiceImpl implements KeycloakService {
      */
     @Override
     public KeycloakAuthResponseDto login(KeycloakAuthRequestDto dto) {
-        userKeycloak = Keycloak.getInstance(url, myRealm,
+        Keycloak userKeycloak = Keycloak.getInstance(url, myRealm,
                 dto.getUsername(), dto.getPassword(),
                 clientName, clientSecret);
         AccessTokenResponse accessTokenResponse = userKeycloak.tokenManager().grantToken();

@@ -1,24 +1,21 @@
 package com.example.logisticssystem.model.entity;
 
 import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import lombok.experimental.FieldDefaults;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.*;
 import java.sql.Timestamp;
 
-@Getter
-@Setter
-@Entity
-@Table(name = "users")
+@Data
+@Document("users")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    String id;
 
     String email;
 
@@ -28,7 +25,6 @@ public class User {
      * Дата регистрации пользователя
      */
     @CreatedDate
-    @Column(name = "created_date")
     Timestamp createdDate;
 
 }
