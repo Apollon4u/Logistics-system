@@ -9,9 +9,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Component;
 
-import java.sql.Timestamp;
-import java.time.Instant;
-
 @Component
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
@@ -26,7 +23,7 @@ public class OrderCreateRequestDtoToOrderConverter
         target.setDistance(source.getDistance());
         target.setLoading(source.isLoading());
         target.setCarId(source.getCarId());
-        target.setMovingDate(Timestamp.valueOf(source.getMovingDate()));
+        target.setMovingDate(source.getMovingDate());
         target.setPointAName(source.getPointAName());
         target.setPointA(source.getPointA());
         target.setPointBName(source.getPointBName());

@@ -7,7 +7,7 @@ import lombok.Setter;
 import lombok.experimental.FieldDefaults;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -17,7 +17,7 @@ import java.util.List;
 public class OrderCreateRequestDto {
 
     @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss", iso = DateTimeFormat.ISO.DATE_TIME)
-    LocalDateTime movingDate;
+    Date movingDate;
 
     boolean packing;
 

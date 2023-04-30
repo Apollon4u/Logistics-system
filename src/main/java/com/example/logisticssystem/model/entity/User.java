@@ -3,12 +3,10 @@ package com.example.logisticssystem.model.entity;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
-import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.sql.Timestamp;
-import java.util.List;
+import java.util.Date;
 
 @Data
 @Document("users")
@@ -25,9 +23,6 @@ public class User {
     /**
      * Дата регистрации пользователя
      */
-    @CreatedDate
-    Timestamp createdDate;
-
-    List<Order> orders;
+    Date createdDate;
 
 }

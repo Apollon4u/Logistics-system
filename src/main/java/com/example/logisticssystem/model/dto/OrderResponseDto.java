@@ -1,25 +1,21 @@
-package com.example.logisticssystem.model.entity;
+package com.example.logisticssystem.model.dto;
 
+import io.swagger.annotations.ApiModel;
 import lombok.AccessLevel;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.experimental.FieldDefaults;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 import java.util.List;
 
-@Data
-@Document("orders")
+@Getter
+@Setter
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Order {
+@ApiModel("Данные о заказе")
+public class OrderResponseDto {
 
-    @Id
     String id;
-
-    @DBRef
-    User user;
 
     Date movingDate;
 
