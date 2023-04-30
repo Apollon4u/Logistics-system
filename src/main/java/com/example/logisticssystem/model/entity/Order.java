@@ -3,31 +3,41 @@ package com.example.logisticssystem.model.entity;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
-import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.List;
 
 @Data
-@Document("users")
+@Document("orders")
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class User {
+public class Order {
 
     @Id
     String id;
 
-    String email;
+    @DBRef
+    User user;
 
-    String keycloakId;
+    Timestamp movingDate;
 
-    /**
-     * Дата регистрации пользователя
-     */
-    @CreatedDate
-    Timestamp createdDate;
+    boolean packing;
 
-    List<Order> orders;
+    boolean loading;
+
+    String carId;
+
+    Double distance;
+
+    String pointAName;
+
+    List<Double> pointA;
+
+    String pointBName;
+
+    List<Double> pointB;
 
 }

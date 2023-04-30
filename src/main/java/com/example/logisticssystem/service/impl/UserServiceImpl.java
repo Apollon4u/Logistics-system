@@ -7,7 +7,6 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 
 @Component
 @RequiredArgsConstructor
@@ -17,8 +16,13 @@ public class UserServiceImpl implements UserService {
     UserRepository userRepository;
 
     @Override
-    @Transactional
     public void create(User user) {
         userRepository.save(user);
     }
+
+    @Override
+    public User getByEmail(String email) {
+        return userRepository.getByEmail(email);
+    }
+
 }
