@@ -17,7 +17,7 @@ public class OrderResponseDto {
 
     String id;
 
-    Date movingDate;
+    String movingDate;
 
     boolean packing;
 
@@ -34,5 +34,11 @@ public class OrderResponseDto {
     String pointBName;
 
     List<Double> pointB;
+
+    String time;
+
+    String numberOfMovers;
+
+    String numberOfPackers;
 
 }

@@ -5,9 +5,7 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.FieldDefaults;
-import org.springframework.format.annotation.DateTimeFormat;
 
-import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -16,8 +14,7 @@ import java.util.List;
 @ApiModel("Тело запроса для создания заказа")
 public class OrderCreateRequestDto {
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss", iso = DateTimeFormat.ISO.DATE_TIME)
-    Date movingDate;
+    String movingDate;
 
     boolean packing;
 
@@ -34,5 +31,11 @@ public class OrderCreateRequestDto {
     String pointBName;
 
     List<Double> pointB;
+
+    String time;
+
+    String numberOfMovers;
+
+    String numberOfPackers;
 
 }

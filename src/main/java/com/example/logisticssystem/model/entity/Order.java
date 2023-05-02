@@ -7,7 +7,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Date;
 import java.util.List;
 
 @Data
@@ -21,7 +20,7 @@ public class Order {
     @DBRef
     User user;
 
-    Date movingDate;
+    String movingDate;
 
     boolean packing;
 
@@ -38,5 +37,11 @@ public class Order {
     String pointBName;
 
     List<Double> pointB;
+
+    String time;
+
+    String numberOfMovers;
+
+    String numberOfPackers;
 
 }

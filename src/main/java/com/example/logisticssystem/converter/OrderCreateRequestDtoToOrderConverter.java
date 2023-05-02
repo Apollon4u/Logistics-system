@@ -28,6 +28,9 @@ public class OrderCreateRequestDtoToOrderConverter
         target.setPointA(source.getPointA());
         target.setPointBName(source.getPointBName());
         target.setPointB(source.getPointB());
+        target.setTime(source.getTime());
+        target.setNumberOfMovers(source.getNumberOfMovers());
+        target.setNumberOfPackers(source.getNumberOfPackers());
         String email = JwtUtils.getUserName();
         target.setUser(userService.getByEmail(email));
     }

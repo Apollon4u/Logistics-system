@@ -19,5 +19,8 @@ public class OrderToOrderResponseDtoConverter extends AbstractLogisticsSystemCon
         target.setPointA(source.getPointA());
         target.setPointBName(source.getPointBName());
         target.setPointB(source.getPointB());
+        target.setTime(source.getTime());
+        target.setNumberOfMovers(source.getNumberOfMovers());
+        target.setNumberOfPackers(source.getNumberOfPackers());
     }
 }
