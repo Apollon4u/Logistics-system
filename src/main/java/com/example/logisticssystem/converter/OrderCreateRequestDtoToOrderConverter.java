@@ -19,9 +19,9 @@ public class OrderCreateRequestDtoToOrderConverter
 
     @Override
     public void fill(OrderCreateRequestDto source, Order target) {
-        target.setPacking(source.isPacking());
+        target.setPacking(source.getPacking());
         target.setDistance(source.getDistance());
-        target.setLoading(source.isLoading());
+        target.setLoading(source.getLoading());
         target.setCarId(source.getCarId());
         target.setMovingDate(source.getMovingDate());
         target.setPointAName(source.getPointAName());

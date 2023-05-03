@@ -11,8 +11,8 @@ public class OrderToOrderResponseDtoConverter extends AbstractLogisticsSystemCon
     public void fill(Order source, OrderResponseDto target) {
         target.setId(source.getId());
         target.setMovingDate(source.getMovingDate());
-        target.setPacking(source.isPacking());
-        target.setLoading(source.isLoading());
+        target.setPacking(source.getPacking());
+        target.setLoading(source.getLoading());
         target.setCarId(source.getCarId());
         target.setDistance(source.getDistance());
         target.setPointAName(source.getPointAName());

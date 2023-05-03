@@ -22,9 +22,9 @@ public class Order {
 
     String movingDate;
 
-    boolean packing;
+    Double packing;
 
-    boolean loading;
+    Double loading;
 
     String carId;
 

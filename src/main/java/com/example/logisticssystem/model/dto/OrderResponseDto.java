@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.FieldDefaults;
 
-import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -19,9 +18,9 @@ public class OrderResponseDto {
 
     String movingDate;
 
-    boolean packing;
+    Double packing;
 
-    boolean loading;
+    Double loading;
 
     String carId;
 
