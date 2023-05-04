@@ -38,4 +38,6 @@ public class OrderCreateRequestDto {
 
     String numberOfPackers;
 
+    Double price;
+
 }

@@ -40,4 +40,6 @@ public class OrderResponseDto {
 
     String numberOfPackers;
 
+    Double price;
+
 }

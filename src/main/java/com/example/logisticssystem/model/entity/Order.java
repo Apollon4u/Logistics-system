@@ -44,4 +44,6 @@ public class Order {
 
     String numberOfPackers;
 
+    Double price;
+
 }

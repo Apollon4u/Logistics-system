@@ -31,6 +31,7 @@ public class OrderCreateRequestDtoToOrderConverter
         target.setTime(source.getTime());
         target.setNumberOfMovers(source.getNumberOfMovers());
         target.setNumberOfPackers(source.getNumberOfPackers());
+        target.setPrice(source.getPrice());
         String email = JwtUtils.getUserName();
         target.setUser(userService.getByEmail(email));
     }
