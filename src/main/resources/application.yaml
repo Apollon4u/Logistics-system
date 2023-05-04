@@ -6,7 +6,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: ${JWT_SET_URI:https://app.please-open.it/auth/realms/bd9c17f0-3f44-438d-9133-0507836fe18d/protocol/openid-connect/certs}
+          jwk-set-uri: ${JWT_SET_URI:https://app.please-open.it/auth/realms/46f7c701-ae40-4d42-a7bd-7a3b42501768/protocol/openid-connect/certs}
 
 logging:
   level:
@@ -24,8 +24,8 @@ server:
 
 keycloak:
   auth-server-url: ${AUTH_SERVER_URL:https://app.please-open.it/auth}
-  realm: ${REALM:bd9c17f0-3f44-438d-9133-0507836fe18d}
-  resource: ${CLIENT_ID:my-client}
-  client-secret: ${CLIENT_SECRET:OUPEpNq7rwBppzuPVIVEYWZEGqRirUhl}
-  username: ${REALM_USERNAME:darkapollon3@gmail.com}
-  password: ${REALM_USER_PASSWORD:qwer123}
+  realm: ${REALM:46f7c701-ae40-4d42-a7bd-7a3b42501768}
+  resource: ${CLIENT_ID:logistics-system-client}
+  client-secret: ${CLIENT_SECRET:jeRBOiPh37EfhFaQ9gOcuEINYuSVn7AX}
+  username: ${REALM_USERNAME:lastpeace14@gmail.com}
+  password: ${REALM_USER_PASSWORD:123}
